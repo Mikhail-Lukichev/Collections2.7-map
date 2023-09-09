@@ -5,6 +5,7 @@ import pro.sky.mikhaillukichevcollections.model.Employee;
 import pro.sky.mikhaillukichevcollections.model.EmployeeService;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/employee/")
@@ -17,7 +18,7 @@ public class EmployeeController {
     }
 
     @GetMapping
-    public List<Employee> displayEmployees() {
+    public Map<String,Employee> displayEmployees() {
         return employeeService.displayEmployees();
     }
 
